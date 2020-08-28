@@ -158,4 +158,13 @@ button:hover{
         width: 80%;
         align-self: center;        
     }
+
+    .artist img {
+        width: 80%;
+        height: 80%;
+    }
+
+    div.bio {
+        width: 100%;
+    }
 }
