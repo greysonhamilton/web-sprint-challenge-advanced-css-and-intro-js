@@ -241,7 +241,7 @@ function getArtistByIndex(array, index) {
 
 function get20s(/* Code here */){
 
-  /* Code here */
+  if (arr[i][years].includes)
 
 }
 
@@ -267,7 +267,6 @@ function removeArtist(arr, i) {
 
   console.log(artists);
  
-
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
 
@@ -281,14 +280,14 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(arr, person, birthDeath, style, birthPlace, info){
+function addArtist(arr, person, birthDeath, style, birthPlace, info, numOfWorks){
 
   let i = arr.length;
 
-  arr.push({id: i, name: person, years: birthDeath, genre: style, nationality: birthPlace, bio: info})
+  arr.push({id: i, name: person, years: birthDeath, genre: style, nationality: birthPlace, bio: info, paintings: numOfWorks})
   console.log(reviews[8]);
 
-  } addArtist(artists, 'Miranda', '1984 - present', 'Pointillism', 'American', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+  } addArtist(artists, 'Miranda', '1984 - present', 'Pointillism', 'American', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 59)
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -298,11 +297,27 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
+const centurions = [];
 
-  /* Code here */
+function lotsOfArt(arr){
+  
+  for(let i = 0; i < arr.length; i++)
+  
+  {
+
+    if (arr[i].paintings > 100) {
+
+      centurions.push(arr[i].name);
+
+    }
+
+  }
 
 }
+
+lotsOfArt(artists);
+
+console.log(centurions);
 
 
 
