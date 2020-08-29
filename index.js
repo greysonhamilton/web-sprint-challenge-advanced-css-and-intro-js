@@ -256,10 +256,16 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+
+function removeArtist(arr, i) {
+    
+  return arr.splice(i,1);
+
   }
-  
+
+  removeArtist(artists, 5);
+
+  console.log(artists);
  
 
 /**
@@ -275,11 +281,14 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
+function addArtist(arr, person, birthDeath, style, birthPlace, info){
 
-    /* Code here */
+  let i = arr.length;
 
-  }
+  arr.push({id: i, name: person, years: birthDeath, genre: style, nationality: birthPlace, bio: info})
+  console.log(reviews[8]);
+
+  } addArtist(artists, 'Miranda', '1984 - present', 'Pointillism', 'American', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
