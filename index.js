@@ -247,15 +247,13 @@ function get20s(arr){
 
   const str1 = arr[i].years.split(' ');
   
-  if (str1[0] > 1900 && str1[2] < 2000);
+  if (str1[0] > 1900 && str1[2] < 2000)
   
   century21Art.push(arr[i].name);
 
 } 
 
-}
-
-get20s(artists);
+}   get20s(artists);
 
 console.log(century21Art);
 
@@ -269,9 +267,17 @@ console.log(century21Art);
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
+/*
+function removeArtist(arr, i) {
+    
+  return arr.splice(i,1);
 
+  }
 
- 
+  removeArtist(artists, 5);
+
+  console.log(artists);
+
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
 
@@ -285,6 +291,26 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
+let newArtist = {};
+
+function addArtist(obj) {
+  
+  artists.push(obj);
+
+  } newArtist = {
+    id: 20,
+    person: 'Miranda',
+    years: '1984 - present',
+    nationality: 'United States Of America',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    paintings: 59,
+  }
+  
+  addArtist(newArtist);
+  
+  console.log(artists);
+
+/* This is the code that I submitted on Friday.
 function addArtist(arr, person, birthDeath, style, birthPlace, info, numOfWorks){
 
   let i = arr.length;
@@ -293,6 +319,8 @@ function addArtist(arr, person, birthDeath, style, birthPlace, info, numOfWorks)
   console.log(artists);
 
   } addArtist(artists, 'Miranda', '1984 - present', 'Pointillism', 'American', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 59)
+
+  console.log(artists);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
