@@ -241,17 +241,19 @@ function getArtistByIndex(array, index) {
 
 const century21Art = [];
 
-function get20s(arr){
+function get20s(arr) {
   
   for (i = 0; i < arr.length; i++) {
 
-  const str1 = arr[i].years.split(' ');
+    const str1 = arr[i].years.split(' ');
   
-  if (str1[0] > 1900 && str1[2] < 2000)
+    if (str1[0] > 1900 && str1[2] < 2000) {
   
-  century21Art.push(arr[i].name);
+      century21Art.push(arr[i].name);
 
-} 
+    }
+
+  }  
 
 }   get20s(artists);
 
@@ -310,7 +312,7 @@ function addArtist(obj) {
   
   console.log(artists);
 
-/* This is the code that I submitted on Friday.
+/*  This is the code that I submitted on Friday.
 function addArtist(arr, person, birthDeath, style, birthPlace, info, numOfWorks){
 
   let i = arr.length;
@@ -332,11 +334,9 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 const centurions = [];
 
-function lotsOfArt(arr){
+function lotsOfArt(arr) {
   
-  for(let i = 0; i < arr.length; i++)
-  
-  {
+  for(let i = 0; i < arr.length; i++) {
 
     if (arr[i].paintings > 100) {
 
